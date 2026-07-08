@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>เกมจับผิดภาพ</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="game-container">
+    <header class="game-header">
+      <h1>เกมจับผิดภาพ</h1>
+      <p id="levelTitle">ค้นหาจุดที่แตกต่างให้ครบ</p>
+    </header>
+
+    <section class="status-bar" aria-label="สถานะเกม">
+      <div>ด่าน: <span id="levelNumber">1</span></div>
+      <div>พบแล้ว: <span id="foundCount">0</span>/<span id="totalCount">0</span></div>
+      <div>เวลา: <span id="timer">60</span> วินาที</div>
+    </section>
+
+    <section class="image-area" aria-label="พื้นที่เล่นเกม">
+      <div class="image-box" id="leftBox" title="คลิกตำแหน่งที่แตกต่าง">
+        <img id="leftImage" src="" alt="ภาพต้นฉบับ" draggable="false">
+        <div class="marker-layer" id="leftMarkers"></div>
+      </div>
+
+      <div class="image-box" id="rightBox" title="คลิกตำแหน่งที่แตกต่าง">
+        <img id="rightImage" src="" alt="ภาพที่มีจุดแตกต่าง" draggable="false">
+        <div class="marker-layer" id="rightMarkers"></div>
+      </div>
+    </section>
+
+    <section class="control-panel">
+      <button id="restartBtn" type="button">เริ่มใหม่</button>
+      <button id="showAnswerBtn" type="button">เฉลย</button>
+      <button id="nextBtn" type="button" disabled>ด่านถัดไป</button>
+    </section>
+
+    <section id="messageBox" class="message-box" role="status">
+      กดที่ตำแหน่งแตกต่างบนภาพใดก็ได้
+    </section>
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>
